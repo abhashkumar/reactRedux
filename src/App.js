@@ -110,6 +110,23 @@ State is Read-Only
 
 Changes are Made with Pure Reducer Functions
 
+In order to be pure a function must follow these rules:
+
+A pure function must always return the same value when given the same inputs.
+A pure function must not have any side effects.
+
+If you haven’t seen Object.assign, what it does is assign properties from one object to another. You can pass it a series of objects, and it will merge them all together, left to right, while overwriting any duplicate properties. (And by “left to right”, I mean that executing Object.assign(result, a, b, c) will copy a into result, then b, then c).
+
+
+If you haven’t seen Object.assign, what it does is assign properties from one object to another. You can pass it a series of objects, and it will merge them all together, left to right, while overwriting any duplicate properties. (And by “left to right”, I mean that executing Object.assign(result, a, b, c) will copy a into result, then b, then c).
+
+Object.assign
+Instead of manually creating an object with the new property, you can use Object.assign to avoid defining the unmodified properties:
+
+
+Spread operator
+You can use the spread operator with the same effect; the difference is that Object.assign() uses setter methods to assign new values, while the spread operator doesn’t:
+
 
 */
 
